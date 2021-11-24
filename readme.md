@@ -3,6 +3,7 @@
 针对 `mongodb` 依赖的Api做的二次封装
 
 | 名称 | 注释 | 参数 | 返回值 |
+| -- | -- | -- | -- |
 | findList | 查询列表（无分页） | collectionName, findObj = {}, sortConfig | Array |
 | findPage | 查询分页 | collectionName, pagination, findObj = {}, sortConfig | Array |
 | findOne | 单项查询 | collectionName, findObj | Object |
