@@ -24,10 +24,10 @@ class Mongo {
     return new Promise((r, j) => {
       if (!this.isConnected) {
         const _this = this;
-        MongoClient.connect(this.CONFIG.url, function(err, client) {
+        MongoClient.connect(_this.CONFIG.url, function(err, client) {
           if (err) return j(err)
           console.log('数据库连接成功。。。');
-          _this.dbase = client.db(this.CONFIG.libraryName);
+          _this.dbase = client.db(_this.CONFIG.libraryName);
           _this.isConnected = true;
           r()
         })
